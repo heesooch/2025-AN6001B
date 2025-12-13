@@ -1,6 +1,10 @@
 from flask import Flask, request ,render_template
 import joblib
+from flask import Flask, request ,render_template
+import joblib
 
+app=Flask(__name__)
+@app.route("/",methods=["GET","POST"])
 app=Flask(__name__)
 @app.route("/",methods=["GET","POST"])
 def index():
@@ -31,4 +35,3 @@ def creditability():
 
 if __name__=="__main__":
     app.run(port=1111)
-
